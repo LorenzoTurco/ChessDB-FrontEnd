@@ -1,21 +1,30 @@
 import "./GamesContainer.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GameButton from "../GameButton/GameButton";
-import { Chessboard } from "kokopu-react";
+import GameList from "../GameList/GameList";
 
 const GamesContainer = () => {
-  const exampleGame = {
-    user: "admin",
-    fen: "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+  const [gameList, setGameList] = useState([]);
+
+  const getGames = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/getGames");
+      const data = await response.json();
+      console.log(data);
+      setGameList(data);
+    } catch (e) {
+      console.log("something went wrong");
+      console.log(e);
+    }
   };
 
-  const [gameList, setGameList] = useState(exampleGame);
+  useEffect(() => {
+    getGames();
+  }, []);
 
   return (
     <>
-      <GameButton></GameButton>
-      <GameButton></GameButton>
-      <GameButton></GameButton>
+      <GameList gameList={gameList}></GameList>
     </>
   );
 };
