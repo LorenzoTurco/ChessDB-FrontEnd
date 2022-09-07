@@ -21,6 +21,7 @@ const GameCard = ({ title, fen, gameId }) => {
   };
 
   const loadChessBoard = () => {
+    console.log("inside");
     if (pressedEditButton) return;
     setShowBoard(!showBoard);
   };
@@ -28,7 +29,7 @@ const GameCard = ({ title, fen, gameId }) => {
   return (
     <div>
       <div className="card">
-        <div className="card__info" classNameonClick={loadChessBoard}>
+        <div className="card__info" onClick={loadChessBoard}>
           <img
             className="card__picture"
             src="https://images.chesscomfiles.com/uploads/v1/library_collection/b692f1e4-81da-11eb-ab75-f95b01a024a6.543dbc39.80x80o.a4283866b809.jpeg"
@@ -38,18 +39,21 @@ const GameCard = ({ title, fen, gameId }) => {
             title={title}
             fen={fen}
             key={gameId}
+            gameId={gameId}
             pressedEditButton={pressedEditButton}
             updateGameInfo={updateGameInfo}
           />
         </div>
 
-        <DeleteButton key={gameId} gameId={gameId}></DeleteButton>
-        <EditButton
-          key={gameId}
-          pressedEditButton={pressedEditButton}
-          editFields={editFields}
-          gameInfo={gameInfo}
-        ></EditButton>
+        <div className="card__buttons">
+          <DeleteButton key={gameId} gameId={gameId}></DeleteButton>
+          <EditButton
+            key={gameId}
+            pressedEditButton={pressedEditButton}
+            editFields={editFields}
+            gameInfo={gameInfo}
+          ></EditButton>
+        </div>
       </div>
 
       {showBoard && (
