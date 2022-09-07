@@ -2,9 +2,6 @@ import "./EditButton.scss";
 import { useState } from "react";
 
 const EditButton = ({ gameId, editFields, pressedEditButton, gameInfo }) => {
-  if (gameInfo != {}) {
-  }
-
   return (
     <>
       <div className="edit">
