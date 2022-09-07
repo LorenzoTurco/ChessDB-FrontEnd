@@ -6,13 +6,13 @@
   gap: 16rem;
   margin-bottom: 3rem;
   background-color: rgb(50, 46, 43);
+  margin-top: 2rem;
 
-  .header__option {
+  .header__title {
     font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     border: none;
-    background-color: white;
-    cursor: pointer;
     background-color: rgb(50, 46, 43);
+    color: white;
   }
 }
