@@ -20,17 +20,17 @@ const GameInfo = ({ title, fen, key, pressedEditButton, updateGameInfo }) => {
   };
 
   return (
-    <div className="card__info">
+    <>
       {pressedEditButton ? (
         <>
-          <form onSubmit={editGame}>
+          <form onSubmit={editGame} className="game__info">
             <input
-              className="card__title"
+              className="game__title"
               defaultValue={title}
               onChange={(e) => setInputTitle(e.target.value)}
             />
             <input
-              className="card__author"
+              className="game__author"
               defaultValue={fen}
               onChange={(e) => setInputFen(e.target.value)}
             ></input>
@@ -39,14 +39,14 @@ const GameInfo = ({ title, fen, key, pressedEditButton, updateGameInfo }) => {
           </form>
         </>
       ) : (
-        <div className="card__info">
-          <div className="card__title">{title}</div>
-          <div className="card__author">
+        <div className="game__info">
+          <div className="game__title">{title}</div>
+          <div className="game__author">
             Created on September 1, 2022 by Anonymous Fen: {fen}
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

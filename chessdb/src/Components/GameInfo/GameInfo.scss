@@ -1,0 +1,17 @@
+.game__info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+
+  .game__title {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .game__author {
+    font-size: 1.2rem;
+    color: rgb(133, 131, 130);
+  }
+}
