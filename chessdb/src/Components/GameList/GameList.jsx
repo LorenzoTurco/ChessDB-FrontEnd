@@ -1,18 +1,15 @@
 import "./GameList.scss";
-import { useState } from "react";
-import GameButton from "../GameButton/GameButton";
+import GameCard from "../GameCard/GameCard";
 
 const GameList = ({ gameList }) => {
-  console.log(gameList);
-
   const displayGames = gameList.map((game) => {
-    console.log(game);
     return (
-      <GameButton
+      <GameCard
         title={game.title}
         fen={game.fen}
+        gameId={game.gameId}
         //dateCreated={game.dateCreated}
-      ></GameButton>
+      ></GameCard>
     );
   });
 
