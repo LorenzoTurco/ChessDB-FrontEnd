@@ -6,8 +6,6 @@ const UploadGameContainer = () => {
   const [title, setTitle] = useState();
 
   const uploadFen = async (e) => {
-    e.preventDefault();
-
     try {
       const response = await fetch("http://localhost:8080/addGame", {
         method: "POST",
@@ -21,7 +19,7 @@ const UploadGameContainer = () => {
   };
 
   return (
-    <div className="container">
+    <div className="upload">
       <form onSubmit={uploadFen}>
         <div>
           <label htmlFor="fen">FEN</label>
@@ -39,7 +37,9 @@ const UploadGameContainer = () => {
             onChange={(e) => setTitle(e.target.value)}
           ></input>
         </div>
-        <button type="submit">Upload game</button>
+        <button className="upload__Button" type="submit">
+          Upload game
+        </button>
       </form>
     </div>
   );

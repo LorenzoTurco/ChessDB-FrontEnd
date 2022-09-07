@@ -25,17 +25,19 @@ const GameInfo = ({ title, fen, key, pressedEditButton, updateGameInfo }) => {
         <>
           <form onSubmit={editGame} className="game__info">
             <input
-              className="game__title"
+              className="game__title--input"
               defaultValue={title}
               onChange={(e) => setInputTitle(e.target.value)}
             />
             <input
-              className="game__author"
+              className="game__author--input"
               defaultValue={fen}
               onChange={(e) => setInputFen(e.target.value)}
             ></input>
 
-            <button type="submit">Save</button>
+            <button className="game__save" type="submit">
+              Save
+            </button>
           </form>
         </>
       ) : (

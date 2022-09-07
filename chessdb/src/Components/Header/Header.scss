@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   gap: 16rem;
-  margin-top: 1.5rem;
   margin-bottom: 3rem;
+  background-color: rgb(50, 46, 43);
 
   .header__option {
     font-size: 2rem;
@@ -13,5 +13,6 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    background-color: rgb(50, 46, 43);
   }
 }

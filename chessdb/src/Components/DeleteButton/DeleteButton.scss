@@ -1,7 +1,14 @@
 .delete {
+  background-color: rgb(38, 37, 33);
+
   .delete-button {
-    color: red;
     border: none;
-    background-color: rgb(38, 37, 33);
+    background-color: rgb(127, 167, 81);
+    padding: 1rem;
+    border-radius: 10px;
+    color: White;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }

@@ -28,5 +28,3 @@ const GamesContainer = () => {
 };
 
 export default GamesContainer;
-
-//      <Chessboard position={gameList.fen} />
