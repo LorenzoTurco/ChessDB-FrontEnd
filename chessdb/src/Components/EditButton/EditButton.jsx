@@ -5,7 +5,7 @@ const EditButton = ({ gameId, editFields, pressedEditButton, gameInfo }) => {
   return (
     <>
       <div className="edit">
-        <form onSubmit={editFields}>
+        <form className="edit__form" onSubmit={editFields}>
           <button className="edit-button" type="submit" text="AAAA">
             {pressedEditButton ? "Cancel" : "Edit"}
           </button>

@@ -17,7 +17,7 @@ const DeleteButton = ({ gameId }) => {
 
   return (
     <div className="delete">
-      <form onSubmit={deleteGame}>
+      <form className="delete__form" onSubmit={deleteGame}>
         <button className="delete-button" type="submit">
           Delete
         </button>

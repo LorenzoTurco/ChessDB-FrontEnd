@@ -20,21 +20,27 @@ const UploadGameContainer = () => {
 
   return (
     <div className="upload">
-      <form onSubmit={uploadFen}>
-        <div>
-          <label htmlFor="fen">FEN</label>
+      <form className="upload__form" onSubmit={uploadFen}>
+        <div className="upload__info">
+          <label className="upload__label" htmlFor="fen">
+            FEN
+          </label>
           <input
             id="fen"
             type="text"
             onChange={(e) => setFen(e.target.value)}
+            className="upload__input"
           ></input>
         </div>
-        <div>
-          <label htmlFor="fen">Title</label>
+        <div className="upload__info">
+          <label className="upload__label" htmlFor="fen">
+            Title
+          </label>
           <input
             id="fen"
             type="text"
             onChange={(e) => setTitle(e.target.value)}
+            className="upload__input"
           ></input>
         </div>
         <button className="upload__Button" type="submit">
