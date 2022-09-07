@@ -1,6 +1,5 @@
 import "./GamesContainer.scss";
 import { useState, useEffect } from "react";
-import GameButton from "../GameButton/GameButton";
 import GameList from "../GameList/GameList";
 
 const GamesContainer = () => {
@@ -10,7 +9,6 @@ const GamesContainer = () => {
     try {
       const response = await fetch("http://localhost:8080/getGames");
       const data = await response.json();
-      console.log(data);
       setGameList(data);
     } catch (e) {
       console.log("something went wrong");
