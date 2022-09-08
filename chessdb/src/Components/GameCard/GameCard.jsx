@@ -21,7 +21,6 @@ const GameCard = ({ title, fen, gameId }) => {
   };
 
   const loadChessBoard = () => {
-    console.log("inside");
     if (pressedEditButton) return;
     setShowBoard(!showBoard);
   };
